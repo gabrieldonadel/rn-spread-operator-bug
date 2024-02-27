@@ -10,10 +10,13 @@ import {
   View,
   Button,
 } from 'react-native';
-import CustomModule from './CustomModule';
-import CustomTurboModule from './CustomTurboModule/index';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
+import {Header} from './Header';
+import SpreadedCustomModule, {CustomModule} from './CustomModule';
+import SpreadedCustomTurboModule, {
+  CustomTurboModule,
+} from './CustomTurboModule/index';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -50,6 +53,7 @@ function App(): React.JSX.Element {
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    flex: 1,
   };
 
   return (
@@ -60,21 +64,31 @@ function App(): React.JSX.Element {
       />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
+        style={backgroundStyle}
+        contentContainerStyle={{flex: 1}}>
         <Header />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
+            flex: 1,
           }}>
           <Section title="NativeModules">
             <Button
-              title="Call CustomModule.helloWorld()"
+              title="Call spreaded helloWorld()"
+              onPress={() => SpreadedCustomModule.helloWorld()}
+            />
+            <Button
+              title="Call plain helloWorld()"
               onPress={() => CustomModule.helloWorld()}
             />
           </Section>
           <Section title="TurboModules">
             <Button
-              title="Call CustomTurboModule.helloWorld()"
+              title="Call spreaded helloWorld()"
+              onPress={() => SpreadedCustomTurboModule.helloWorld()}
+            />
+            <Button
+              title="Call plain helloWorld()"
               onPress={() => CustomTurboModule.helloWorld()}
             />
           </Section>
@@ -97,9 +111,6 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
   },
 });
 
