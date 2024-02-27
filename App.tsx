@@ -11,6 +11,7 @@ import {
   Button,
 } from 'react-native';
 import CustomModule from './CustomModule';
+import CustomTurboModule from './CustomTurboModule/index';
 
 import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
 
@@ -71,14 +72,11 @@ function App(): React.JSX.Element {
               onPress={() => CustomModule.helloWorld()}
             />
           </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
+          <Section title="TurboModules">
+            <Button
+              title="Call CustomTurboModule.helloWorld()"
+              onPress={() => CustomTurboModule.helloWorld()}
+            />
           </Section>
         </View>
       </ScrollView>

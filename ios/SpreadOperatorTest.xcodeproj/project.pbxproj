@@ -15,6 +15,8 @@
 		7699B88040F8A987B510C191 /* libPods-SpreadOperatorTest-SpreadOperatorTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-SpreadOperatorTest-SpreadOperatorTestTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C065F64D2B8E6883005DA1A7 /* CustomModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C065F64C2B8E6883005DA1A7 /* CustomModule.m */; };
+		C065F64F2B8E73E9005DA1A7 /* CustomTurboModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = C065F64E2B8E73E9005DA1A7 /* CustomTurboModule.mm */; };
+		C065F6542B8E7E7E005DA1A7 /* CustomTurboModuleSpec in Resources */ = {isa = PBXBuildFile; fileRef = C065F6532B8E7E7E005DA1A7 /* CustomTurboModuleSpec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,9 @@
 		89C6BE57DB24E9ADA2F236DE /* Pods-SpreadOperatorTest-SpreadOperatorTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreadOperatorTest-SpreadOperatorTestTests.release.xcconfig"; path = "Target Support Files/Pods-SpreadOperatorTest-SpreadOperatorTestTests/Pods-SpreadOperatorTest-SpreadOperatorTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		C065F64B2B8E6873005DA1A7 /* CustomModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomModule.h; sourceTree = "<group>"; };
 		C065F64C2B8E6883005DA1A7 /* CustomModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomModule.m; sourceTree = "<group>"; };
+		C065F64E2B8E73E9005DA1A7 /* CustomTurboModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CustomTurboModule.mm; sourceTree = "<group>"; };
+		C065F6522B8E7CF1005DA1A7 /* CustomTurboModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTurboModule.h; sourceTree = "<group>"; };
+		C065F6532B8E7E7E005DA1A7 /* CustomTurboModuleSpec */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CustomTurboModuleSpec; path = build/generated/ios/CustomTurboModuleSpec; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -89,6 +94,7 @@
 		13B07FAE1A68108700A75B9A /* SpreadOperatorTest */ = {
 			isa = PBXGroup;
 			children = (
+				C065F6532B8E7E7E005DA1A7 /* CustomTurboModuleSpec */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -97,6 +103,8 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				C065F64B2B8E6873005DA1A7 /* CustomModule.h */,
 				C065F64C2B8E6883005DA1A7 /* CustomModule.m */,
+				C065F64E2B8E73E9005DA1A7 /* CustomTurboModule.mm */,
+				C065F6522B8E7CF1005DA1A7 /* CustomTurboModule.h */,
 			);
 			name = SpreadOperatorTest;
 			sourceTree = "<group>";
@@ -246,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C065F6542B8E7E7E005DA1A7 /* CustomTurboModuleSpec in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -400,6 +409,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				C065F64D2B8E6883005DA1A7 /* CustomModule.m in Sources */,
+				C065F64F2B8E73E9005DA1A7 /* CustomTurboModule.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
