@@ -37,6 +37,9 @@
   "codegenConfig": {
     "name": "CustomTurboModuleSpec",
     "type": "modules",
-    "jsSrcsDir": "CustomTurboModule/js"
+    "jsSrcsDir": "CustomTurboModule/js",
+    "android": {
+      "javaPackageName": "com.spreadoperatortest"
+    }
   }
 }
